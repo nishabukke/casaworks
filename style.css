@@ -23,34 +23,37 @@ a:hover{
 .header{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255,255,255,0.6);
+    z-index: 999;
 }
 
 .left-header{
     padding: 5px 5px;
-    background-color: #fff;
-    margin-left: 10px;
+    margin-left: 40px;
+    position: relative;
 }
 
 .left-header img{
-    width: 80px;
+    width: 100px;
+    z-index: 9999;
 }
 
 .nav-link{
-    font-weight: 900;
-    color: #fff;
+    font-weight: 700;
+    color: #284658;
     text-decoration: none;
 }
 
 .nav-link:hover{
-    color: #ffcc00;
+    color: #284658;
     text-decoration: none;
     border-bottom: 2px solid #37b1e2;
 }
-/* 
-.navbar-nav .nav-link.active {
-    color: #ffcc00;
-} */
 
 .headings{
     text-align: center;
@@ -74,10 +77,8 @@ a:hover{
 
 
 .banner-form{
-    width: 35%;
-    padding: 10px 25px;
-    background: rgba(255,255,255,0.85);;
-    margin: 50px 45px 0px auto;
+    display: flex;
+    gap: 25px;
     border-radius: 20px;
 }
 
@@ -128,11 +129,52 @@ a:hover{
     background-color: #37b1e2;
 }
 
+/* whatsapp chat */
+
+
+/* .whatsapp{
+    right: 30px;
+    bottom: 95px;
+} */
+
+.whatsapp{
+    position: fixed;
+    z-index: 9999;
+    right: 30px;
+    bottom: 95px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background: green;
+    border-radius: 50%;
+    padding: 5px 15px;
+    color: #fff;
+}
+
+.whatsapp i{
+    position: absolute;
+    font-size: 24px;
+    top:50%;
+    left:50%;
+    margin-left:-10px;
+    margin-top:-12px;
+}
+
+.whatsapp:hover{
+    background-color: #fff;
+    color: green;
+}
+
+.whatsapp.active{
+    background: green;
+    color: #fff;
+}
+
 /* back to top */
 
 
 #scroll {
-    z-index: 1;
+    z-index: 9999;
     position:fixed;
     right:30px;
     bottom: 30px;
@@ -163,15 +205,124 @@ a:hover{
     -ms-filter:"alpha(opacity=100)";
 }
 
+.carousel-indicators .active {
+    width: 30px;
+    height: 3px;
+    margin: 0;
+    background-color: #fff;
+}
+
+.carousel-item img{
+    height: 550px;
+}
+/* 
 .banner{
-    background-image: url(images/handyman_banner_yellow.jpg);
+    background-image: url(images/handyman_banner1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     height: 550px;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+} */
+
+
+.slide-show-container {
+    height: 600px;
+    width: 100%;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  /* CSS Styles in common for all slides */
+  .wrapper-one,
+  .wrapper-two,
+  .wrapper-three {
+    background-color: #eee;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  
+  /* CSS Styles for each slide */
+  /* Just add the image as background attribute and add some animation */
+  
+  .wrapper-one {
+      background-image: url("images/handyman_banner1.jpg");
+      background-size: cover;
+      background-position: center;
+  }
+  
+  .wrapper-two {
+      background-image: url("images/tile-working.jpg");
+    animation: slideTwoAnim 20s infinite;
+  }
+  
+  .wrapper-three {
+      background-image: url("images/electric-working.jpg");
+    animation: slideThreeAnim 20s infinite;
+  }
+  
+  /* Styles for the text */
+  .wrapper-text {
+    font-weight: 700;
+    font-size: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 250px;
+    text-transform: uppercase;
+    color: #eee;
+  }
+  
+  /* Animations */
+  @keyframes slideTwoAnim {
+      0%{opacity:0;}
+      17%{opacity:0;}
+      33%{opacity:1;}
+      50%{opacity:1;}
+      67%{opacity:0;}
+      100%{opacity:0;}
+  }
+  
+  @keyframes slideThreeAnim {
+      0%{opacity:0;}
+      50%{opacity:0;}
+      67%{opacity:1;}
+      83%{opacity:1;}
+      100%{opacity:0;}
+  }
+
+  .wrapper-one p, .wrapper-two p, .wrapper-three p{
+    font-weight: 600;
+    font-size: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+    text-align: center;
+    margin: 0px auto;
+    color: #eee;
+  }
+
+
+  .get-in-touch {
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    background: #fff;
+    padding: 10px 50px 35px;
+    border-radius: 15px;
+    height: 100px;
+    transform: translate(-50px, -50px);
+    margin-left: -20px;
 }
 
+
+.get-in-touch:hover{
+    cursor: pointer;
+}
 
 
 /******* fade effects  *********/
@@ -189,6 +340,10 @@ a:hover{
     animation: fade-up 1s ease-in;
   }
 
+  .active.fade-up-form {
+    animation: fade-up-form 1s ease-in;
+  }
+
   @keyframes fade-up {
     0% {
       transform: translateY(100px);
@@ -198,6 +353,14 @@ a:hover{
       transform: translateY(0);
       opacity: 1;
     }
+  }
+
+  .active.fade-left {
+    animation: fade-left 1s ease-in;
+  }
+
+  .active.fade-right {
+    animation: fade-right 1s ease-in;
   }
 
   .active.fade-left {
@@ -233,12 +396,25 @@ a:hover{
 
 /***** about us *****/
 
-.about-us-banner{
-    background-image: url(images/about-us-banner.jpg);
-    height: 400px;
+.about-us-container{
+    background-image: url(images/about-bg.jpg);
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    /* height: 400px; */
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+}
+
+.overlay-about{
+    background-color: transparent;
+    background-image: linear-gradient(90deg, #fff 0%, #FFFFFF00 100%);
+    opacity: 1;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
 }
 
 .abouts-us-content{
@@ -313,6 +489,24 @@ a:hover{
 
 /*Reviews*/
 
+.reviews-container{
+    background-image: url(images/testim-bg.jpg);
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    background-size: cover;
+    background-repeat: repeat;
+    background-color: rgba(0, 0, 0, 0);
+    background-attachment: fixed;
+}
+
+/* .overlay-review{
+    color: inherit;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.8);
+} */
+
 
 .box-area{
     padding: 30px;
@@ -376,13 +570,13 @@ a:hover{
     position: absolute;
 }
 
-.owl-prev{
-    left: -60px;
+.owl-prev {
+    left: -45px;
     top: -30px;
 }
 
 .owl-next{
-    right: -60px;
+    right: -45px;
     top: -30px;
 }
 
@@ -457,6 +651,7 @@ a:hover{
         bottom: 75px;
     }
 
+
     .contact-content {
         flex-direction: column;
         align-items: center;
@@ -481,19 +676,38 @@ a:hover{
     }
 }
 
-@media screen and(max-width:767px){
+@media screen and (max-width:768px){
     .owl-nav{
         display: none !important;
     }
     .box-area{
         text-align: center;
     }
+
+    .contact-links {
+        gap: 5px;
+        margin-top: 20px;
+    }
+
+    .wrapper-text{
+        margin-top: 200px !important;
+    }
+
+    .whatsapp{
+        right: 85px;
+    bottom: 75px;
+    }
     
 }
 
 @media screen and (max-width:360px) {
 
-    .banner-form{
+    .whatsapp{
+        right: 85px;
+    bottom: 75px;
+    }
+
+    .get-in-touch{
         display: none;
     }
 
@@ -513,5 +727,25 @@ a:hover{
 
     .bg-box{
         width: 80%;
+    }
+
+    .wrapper-one p, .wrapper-two p, .wrapper-three p {
+        font-size: 14px;
+    }
+
+    .abouts-us-content{
+        font-size: 12px;
+    }
+
+    .services {
+        gap: 10px;
+    }
+
+    .service-name{
+        font-size: 12px;
+    }
+
+    .wrapper-text {
+        font-size: 24px;
     }
 }
