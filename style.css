@@ -53,6 +53,10 @@ a:hover{
     z-index: 9999;
 }
 
+.navbar{
+    margin: 0;
+}
+
 .nav-link{
     font-weight: 700;
     font-size: 18px;
@@ -564,37 +568,6 @@ a:hover{
     color: #fff;
 }
 
-@media screen and (max-width:1024px) {
-
-    #scroll{
-        right: 25px;
-        bottom: 75px;
-    }
-
-
-    .contact-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-content-desc{
-        font-size: 13px;
-    }
-
-    #contact-form{
-        margin-top: 30px;
-    }
-
-    .owl-nav{
-        display: none !important;
-    }
-
-    
-    .navbar-nav{
-        display: flex;
-        flex-direction: row;
-    }
-}
 
 @media screen and (max-width:768px){
     .owl-nav{
@@ -602,6 +575,26 @@ a:hover{
     }
     .box-area{
         text-align: center;
+    }
+
+    .get-in-touch{
+        top: 67%;
+        left: 8%;
+        padding: 10px 14px 10px;
+    }
+
+    .up-button, .down-button{
+        padding: 10px;
+    }
+
+    .navbar-nav{
+        display: flex;
+        margin: 0;
+        flex-direction: row;
+    }
+
+    .banner-form{
+        gap: 10px;
     }
 
     .contact-links {
@@ -614,8 +607,12 @@ a:hover{
     }
 
     .whatsapp{
-        right: 85px;
-    bottom: 75px;
+        right: 30px;
+    bottom: 85px;
+    }
+
+    .footer-container .row .col-12{
+        border: none !important;
     }
     
 }
@@ -623,8 +620,29 @@ a:hover{
 @media screen and (max-width:450px) {
 
     .whatsapp{
-        right: 85px;
-    bottom: 75px;
+        right: 30px;
+    bottom: 85px;
+    }
+
+    .right-header{
+        display: none;
+    }
+
+    .left-header{
+        margin: 0;
+    }
+
+    .header{
+        justify-content: center;
+    }
+
+    .left-slide h1 {
+        font-size: 16px;
+    }
+
+    .left-slide p {
+        font-size: 12px;
+        text-align: center;
     }
 
     .get-in-touch{
