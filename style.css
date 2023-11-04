@@ -113,6 +113,7 @@ a:hover{
     padding: 10px 25px;
     background: rgba(0,0,0,0.2);
     border-radius: 20px;
+    margin: 0 20px;
 }
 
 .banner-btn-mobile{
@@ -580,9 +581,6 @@ a:hover{
 
 
 @media screen and (max-width:768px){
-    .owl-nav{
-        display: none !important;
-    }
     .box-area{
         text-align: center;
     }
@@ -632,6 +630,10 @@ a:hover{
     .whatsapp{
         right: 30px;
     bottom: 85px;
+    }
+
+    .home-services-container .row{
+        padding-bottom: 0 !important;
     }
 
     .right-header{
